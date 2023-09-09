@@ -1,0 +1,55 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/form.css">
+<link rel="stylesheet" href="/css/Blog.css">
+<body>
+    <%- include('../includes/navigation-bar.ejs') %>
+    <main>
+      <br>
+        <div class='quote'>
+            <br>
+        </div>
+        <br>
+        <div class='quote'>
+            <br>
+        </div>
+        <br>
+        <% if (blogs.length > 0) { %>
+          <div class="grid">
+              <% for (let blog of blogs) { %>
+      <div class="container">
+          <div class="column">
+            <div class="card">
+              <div class="content">
+                <div class="front">
+                  <img class="profile" width="100%" src="<%= blog.imgUrl %>" alt="Error">
+                  <h2><%= blog.title %></h2>
+                </div>
+                <div class="card__actions">
+                    <form action="/admin/deleteBlog" method="POST">
+                        <input type="hidden" value="<%= blog.id %>" name="blogId">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" minlength="8">
+                        <button class="btn" type="submit">Delete</button>
+                    </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+         <br>
+         <% } %>
+                </div>
+                <% } else { %>
+                    <h1>No Blogs Found!</h1>
+                    <% } %>
+                    <br>
+                    <br>
+        <div class='quote'>
+            <br>
+        </div> 
+        <br>
+        <br>
+    </main>
+    <%- include('../includes/nwHead.ejs') %>

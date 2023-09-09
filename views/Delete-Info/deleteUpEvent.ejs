@@ -1,0 +1,54 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/Event.css">
+<body>
+    <%- include('../includes/navigation-bar.ejs') %>
+    <div class="even">
+        <h1>Upcoming Events</h1>
+        <% if (events.length > 0) { %>
+            <div class="container">
+            <% for (let event of events) { %>
+                <div class="container">
+                    <div class="column">
+                      <div class="card">
+                        <div class="content">
+                          <div class="front">
+                            <img class="profile" width="100%" src="<%= event.imgUrl %>" alt="Error">
+                            <h2><%= event.title %></h2>
+                          </div>
+                          <div class="card__actions">
+                            <h2>Delete</h2>
+                              <form action="/admin/deleteEvent" method="POST">
+                                  <input type="hidden" value="<%= event.id %>" name="eventId">
+                                  <label for="password">Password</label>
+                                  <input type="password" id="password" name="password" minlength="8">
+                                  <button class="btn" type="submit">Delete</button>
+                              </form>
+          
+                          </div>
+                          <h2>Event Completed</h2>
+                          <form action="/admin/EventCompleted" method="POST">
+                            <input type="hidden" value="<%= event.id %>" name="eventId">
+                            <input type="hidden" value="<%= event.name %>" name="name">
+                            <input type="hidden" value="<%= event.imgUrl %>" name="imgUrl">
+                            <input type="hidden" value="<%= event.mess %>" name="mess">
+                            <input type="hidden" value="<%= event.conn %>" name="conn">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" minlength="8">
+                            <button class="btn" type="submit">EventCompleted</button>
+                        </form>
+    
+                    </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                   <br>
+        <% } %>
+                </div>
+                <% } else { %>
+                    <h1>No Up Coming Found!</h1>
+                    <% } %>
+    </div>
+    </div>
+    <%- include('../includes/nwHead.ejs') %>

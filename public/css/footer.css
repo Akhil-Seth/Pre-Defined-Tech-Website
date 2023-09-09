@@ -1,0 +1,68 @@
+.footer {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    /* flex-wrap: wrap; */
+}
+
+.layer {
+    flex: 1;
+    max-width: 350px;
+    margin: 10px;
+}
+
+.layer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.layer p {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.layer a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 3px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 55px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  

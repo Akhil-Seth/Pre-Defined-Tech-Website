@@ -1,0 +1,49 @@
+<!-- <%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/gallery.css">
+<body>
+    <main>
+        <div class='quote'>
+            <h1 class="dddd">Content Members</h1>
+        </div>
+        <div class="mainCon">
+        <% if (photos.length > 0) { %>
+            <div class="container">
+            <% for (let photo of photos) { %>
+                <div class="box">
+                  <div class="imgBx">
+                    <img  src="<%= photo.imageUrl %>">
+                  </div>
+                  <div class="content">
+                    <div>
+                      <h2><%= photo.title %></h2>
+                    </div>
+                  </div>
+                </div>
+         <% } %>
+                </div>
+                <% } else { %>
+                    <h1>No Photos So Far!</h1>
+                    <% } %>
+                  </div>
+       
+        <br>
+        <br>
+    </main>
+    <%- include('../includes/nwHead.ejs') %> -->
+    <%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/gallery2.css">
+    <body>
+      <div class="tt"><h1>Content</h1></div>
+        <main>
+          <div id="gallery">
+              <% for (let photo of photos) { %>
+            <figure>
+              <img src="<%= photo.imageUrl %> " title="<%= photo.title %>">
+              <figcaption><%= photo.title %></figcaption>
+            </figure>
+            <% } %>
+    
+          </div>
+        </main>
+        <script src="/js/gallery.js"></script>
+        <%- include('../includes/nwHead.ejs') %>

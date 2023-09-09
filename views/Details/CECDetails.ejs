@@ -1,0 +1,77 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/form.css">
+<link rel="stylesheet" href="/css/detailss.css">
+<body>
+    <%- include('../includes/navigation-bar.ejs') %>
+        <main>
+            <section id="slider" class="row">
+                <div class="col-xs-12 area">
+                    <div class="more-slider col-xs-12 col-sm-6 col-sm-push-6 col-md-3 col-md-push-9">
+                        <article class="content row">
+                            <h4>Chemi E Car</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laudantium enim provident voluptas porro veritatis atque, quae mollitia! Cupiditate voluptatum tenetur unde ipsam sapiente id quidem pariatur cum reiciendis deserunt? Pariatur aliquam iure accusamus dolore, velit fugit cupiditate modi iusto provident molestias cum in animi quis, dicta commodi natus, perspiciatis architecto doloribus. Sapiente molestias facere tempore laborum accusantium eaque at mollitia unde officiis sed ipsa assumenda deleniti doloremque dicta explicabo temporibus, eos provident recusandae a odit deserunt. Numquam, nam sed accusantium aliquam commodi voluptates vitae illum. Ea id odit laudantium qui repellendus, est non commodi iure odio earum dolorum amet nobis omnis et quaerat libero architecto, necessitatibus a cupiditate veritatis eius voluptas mollitia. Provident natus debitis optio quo corrupti velit voluptate quos quibusdam omnis enim ab totam eos necessitatibus, eius dolorem? Vero quibusdam nobis explicabo perferendis. Adipisci impedit illo ducimus vitae ipsa repellendus nulla, repudiandae provident vel. Praesentium culpa voluptatum blanditiis sit distinctio itaque eligendi dolorem quis commodi vero, laborum id atque maxime quia quisquam at perferendis ex. Exercitationem quis eveniet accusamus molestiae, fugiat quae optio explicabo odio dicta. Eum dicta ad molestiae excepturi voluptatum ipsa expedita tenetur quod quis. Nihil pariatur reiciendis modi ullam quaerat, esse amet fugiat id!</p>
+                            <div class="slide-controls"><span class="slider-previous"><i class="fas fa-angle-left"></i></span><span class="slider-next"><i class="fas fa-angle-right"></i></span></div>
+                        </article>
+                    </div>
+                    <div class="slider-wrapper col-xs-9 col-sm-pull-6 col-md-pull-3">
+                            <div class="scroll-wrapper">
+                                <ul class="row">
+
+                                    <% if (infos.length > 0) { %>
+                                        <div class="grid" class="detailImg">
+                                            <% for (let info of infos) { %>
+                                        <a href="<%= info.instaCEC %>" title="Architecture">
+                                            <li class="slider" style="left:-0%;-webkit-transition:left 1s;transition:left 1s;">
+                                                <img  src="<%= info.imgCEC %>" alt="CEC" />
+                                                <span class="slider-name"><%= info.nameCEC %></span>
+                                                <span class="slider-title"><%= info.messCEC %></span>
+                                            </li>
+                                        </a>
+                                        <% } %>
+                                        <% } else { %>
+                                            <h1>No Information Found!</h1>
+                                            <% } %>
+                                            
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <!-- <% if (infos.length > 0) { %>
+                <div class="grid">
+                    <% for (let info of infos) { %>
+                        <article class="card_product-item">
+                            <header class="card__header">
+                                <h1 class="product__title">
+                                    <%= info.nameCEC %>
+                                </h1>
+                            </header>
+                            <div class="card__image">
+                                <img src="<%= info.imgCEC %>" alt="FA">
+                            </div>
+                            <div class="card__content">
+                                <p class="product__description">
+                                    <%= info.messCEC %>
+                                </p>
+                            </div>
+                            <div class='social-media'>
+                                For Instagram  => 
+                                <a href='<%= info.instaCEC %>' target='_blank' class="btn">
+                                    Click Here
+                                </a>
+                            </div>
+                            <br>
+                        </article>
+                        <br>
+                        <br>
+                        <% } %>
+                </div>
+                <% } else { %>
+                    <h1>No Information Found!</h1>
+                    <% } %> -->
+        </main>
+    <%- include('../includes/nwHead.ejs') %>

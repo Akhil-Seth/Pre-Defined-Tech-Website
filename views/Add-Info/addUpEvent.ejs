@@ -1,0 +1,36 @@
+
+    
+    
+    <%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/formNew.css">
+<body>
+
+        <body class="page">
+            <main class="main page__main">
+              <form class="login-form main__login-form" action="/admin/addEvent" method="POST">
+                <h3 class="login-form__title">Add to Events</h3>
+
+                <label for="name">Event Name</label>
+                <input type="text" name="name" id="name" >
+                <br>
+                <label for="img">Image URL</label>
+                <input type="text" name="img" id="img" >
+                <br>
+                <label for="conn">Any Connections</label>
+                <input type="text" name="conn" id="conn" >
+                <br>
+                <label for="mess">Any Message</label>
+                <input type="textarea" name="mess" id="mess"  >
+                <br>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" minlength="8">
+                    <br>
+                    <br>
+                <button class="primary-btn" type="submit">Add Info to Event</button>
+
+              </form>
+            </main>
+          </body>
+    </main>
+
+    <%- include('../includes/nwHead.ejs') %>

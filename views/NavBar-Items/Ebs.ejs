@@ -1,0 +1,223 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/form.css">
+<!-- <link rel="stylesheet" href="/css/EbSearchBar.css"> -->
+<link rel="stylesheet" href="/css/Eb.css">
+<body>
+  <%- include('../includes/navigation-bar.ejs') %>
+    <div class="container" id="cccf">
+        <div class="car">
+          <div class="face face1">
+            <div class="content">
+               <!-- <i class="fa fa-rocket"></i>            
+              <h3>Faculty Advisor</h3> -->
+              <img src="<%= currEbs.imgFA %>" class="imgEbs">
+              <h3>Faculty Advisor</h3>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p><%= currEbs.nameFA %></p>
+              <a href="<%= currEbs.instaFA %>" class="btn">Instagram</a>
+            </div>
+          </div>
+       </div>
+       
+       <div class="car">
+          <div class="face face1">
+            <div class="content">
+                <img src="<%= currEbs.imgPre %>" class="imgEbs">              <h3>President</h3>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p><%= currEbs.namePre %></p>
+              <a href="<%= currEbs.instaPre %>" class="btn">Instagram</a>
+            </div>
+          </div>
+       </div>
+       
+       
+       <div class="car">
+          <div class="face face1">
+            <div class="content">
+                <img src="<%= currEbs.imgVpre %>" class="imgEbs">
+               <h3>Vice President</h3>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              p><%= currEbs.nameVpre %></p>
+              <a href="<%= currEbs.instaVpre %>" class="btn">Instagram</a>
+            </div>
+          </div>
+       </div>
+
+       <div class="car">
+        <div class="face face1">
+          <div class="content">
+            <img src="<%= currEbs.imgGRH %>" class="imgEbs">
+             <h3>General Relation Head</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p><%= currEbs.nameGRH %></p>
+              <a href="<%= currEbs.instaGRH %>" class="btn">Instagram</a>
+          </div>
+        </div>
+     </div>
+
+     <div class="car">
+        <div class="face face1">
+          <div class="content">
+            <img src="<%= currEbs.imgSC %>" class="imgEbs">
+             <h3>Secretary</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p><%= currEbs.nameSC %></p>
+              <a href="<%= currEbs.instaSC %>" class="btn">Instagram</a>
+          </div>
+        </div>
+     </div>
+
+     <div class="car">
+        <div class="face face1">
+          <div class="content">
+            <img src="<%= currEbs.imgTS %>" class="imgEbs">
+             <h3>Treasurer</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p><%= currEbs.nameTS %></p>
+              <a href="<%= currEbs.instaTS %>" class="btn">Instagram</a>
+          </div>
+        </div>
+     </div>
+
+     <div class="car">
+        <div class="face face1">
+          <div class="content">
+            <img src="<%= currEbs.imgCEC %>" class="imgEbs">
+             <h3>Chemi-E-Car Head</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p><%= currEbs.nameCEC %></p>
+              <a href="<%= currEbs.instaCEC %>" class="btn">Instagram</a>
+          </div>
+        </div>
+     </div>
+
+     <div class="car">
+        <div class="face face1">
+          <div class="content">
+            <img src="<%= currEbs.imgDH %>" class="imgEbs">
+             <h3>Design Head</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p><%= currEbs.nameDH %></p>
+              <a href="<%= currEbs.instaDH %>" class="btn">Instagram</a>
+          </div>
+        </div>
+     </div>
+
+     <div class="car">
+        <div class="face face1">
+          <div class="content">
+            <img src="<%= currEbs.imgCH %>" class="imgEbs">
+             <h3>Content Head</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p><%= currEbs.nameCH %></p>
+            <a href="<%= currEbs.instaCH %>" class="btn">Instagram</a>
+          </div>
+        </div>
+     </div>
+
+     <!-- <div class="car">
+        <div class="face face1">
+          <div class="content">
+            <img src="<%= currEbs.imgWH %>" class="imgEbs">
+             <h3>Web Head</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p><%= currEbs.nameWH %></p>
+            <a href="/admin/WH-details" class="btn">Details</a>
+          </div>
+        </div>
+     </div>
+
+     <div class="car">
+        <div class="face face1">
+          <div class="content">
+            <img src="<%= currEbs.imgKC %>" class="imgEbs">
+             <h3>K12 Coordinator</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p><%= currEbs.nameKC %></p>
+            <a href="/admin/KC-details" class="btn">Details</a>
+          </div>
+        </div>
+     </div>
+
+     <div class="car">
+        <div class="face face1">
+          <div class="content">
+            <img src="<%= currEbs.imgDC %>" class="imgEbs">
+             <h3>Documentation Coordinator</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p><%= currEbs.nameDC %></p>
+            <a href="/admin/DC-details" class="btn">Details</a>
+          </div>
+        </div>
+     </div>
+
+     <div class="car">
+        <div class="face face1">
+          <div class="content">
+            <img src="<%= currEbs.imgSPC %>" class="imgEbs">
+             <h3>Sophomore coordinator</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p><%= currEbs.nameSPC %></p>
+            <a href="/admin/SPC-details" class="btn">Details</a>
+          </div>
+        </div>
+     </div>
+
+     <div class="car">
+        <div class="face face1">
+          <div class="content">
+            <img src="<%= currEbs.imgSMC %>" class="imgEbs">
+             <h3>Social media coordinator</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p><%= currEbs.nameSMC %></p>
+            <a href="/admin/SMC-details" class="btn">Details</a>
+          </div>
+        </div>
+     </div> -->
+       
+     </div>
+     <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
+</body>
+<%- include('../includes/nwHead.ejs') %>

@@ -1,0 +1,195 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/form.css">
+<body>
+    <%- include('../includes/navigation-bar.ejs') %>
+    <main>
+        <form class="product-form" action="/admin/addInfoToEbs" method="POST" >
+            <div class="form-control">
+                <h1 class="header1">Faculty Advisor</h1>
+                <label for="nameFA">Faculty Advisor Name</label>
+                <input type="text" name="nameFA" id="nameFA" >
+                <label for="imgFA">Image URL</label>
+                <input type="text" name="imgFA" id="imgFA" >
+                <label for="linkFA">Linkedin Connection</label>
+                <input type="text" name="linkFA" id="linkFA" >
+                <label for="instaFA">Instragram Connection</label>
+                <input type="text" name="instaFA" id="instaFA" >
+                <label for="messFA">Any Message</label>
+                <input type="textarea" name="messFA" id="messFA"  >
+            </div>
+            <div class="form-control">
+                <h1 class="header1">President</h1>
+                <label for="namePre">President Name</label>
+                <input type="text" name="namePre" id="namePre" >
+                <label for="imgPre">Image URL</label>
+                <input type="text" name="imgPre" id="imgPre" >
+                <label for="linkPre">Linkedin Connection</label>
+                <input type="text" name="linkPre" id="linkPre" >
+                <label for="instaPre">Instragram Connection</label>
+                <input type="text" name="instaPre" id="instaPre" >
+                <label for="messPre">Any Message</label>
+                <input type="textarea" name="messPre" id="messPre"  >
+            </div>
+            <div class="form-control">
+                <h1 class="header1">Vice President</h1>
+                <label for="nameVpre">Vice President Name</label>
+                <input type="text" name="nameVpre" id="nameVpre" >
+                <label for="imgVpre">Image URL</label>
+                <input type="text" name="imgVpre" id="imgVpre" >
+                <label for="linkVpre">Linkedin Connection</label>
+                <input type="text" name="linkVpre" id="linkVpre" >
+                <label for="instaVpre">Instragram Connection</label>
+                <input type="text" name="instaVpre" id="instaVpre" >
+                <label for="messVpre">Any Message</label>
+                <input type="textarea" name="messVpre" id="messVpre"  >
+            </div>
+            <div class="form-control">
+                <h1 class="header1">General Relation Head</h1>
+                <label for="nameGRH">General Relation Head Name</label>
+                <input type="text" name="nameGRH" id="nameGRH" >
+                <label for="imgGRH">Image URL</label>
+                <input type="text" name="imgGRH" id="imgGRH" >
+                <label for="linkGRH">Linkedin Connection</label>
+                <input type="text" name="linkGRH" id="linkGRH" >
+                <label for="instaGRH">Instragram Connection</label>
+                <input type="text" name="instaGRH" id="instaGRH" >
+                <label for="messGRH">Any Message</label>
+                <input type="textarea" name="messGRH" id="messGRH"  >
+            </div>
+            <div class="form-control">
+                <h1 class="header1">Secretary</h1>
+                <label for="nameSC">Secretary Name</label>
+                <input type="text" name="nameSC" id="nameSC" >
+                <label for="imgSC">Image URL</label>
+                <input type="text" name="imgSC" id="imgSC" >
+                <label for="linkSC">Linkedin Connection</label>
+                <input type="text" name="linkSC" id="linkSC" >
+                <label for="instaSC">Instragram Connection</label>
+                <input type="text" name="instaSC" id="instaSC" >
+                <label for="messSC">Any Message</label>
+                <input type="textarea" name="messSC" id="messSC"  >
+            </div>
+            <div class="form-control">
+                <h1 class="header1">Treasurer</h1>
+                <label for="nameTS">Treasurer Name</label>
+                <input type="text" name="nameTS" id="nameTS" >
+                <label for="imgTS">Image URL</label>
+                <input type="text" name="imgTS" id="imgTS" >
+                <label for="linkTS">Linkedin Connection</label>
+                <input type="text" name="linkTS" id="linkSC" >
+                <label for="instaTS">Instragram Connection</label>
+                <input type="text" name="instaTS" id="instaTS" >
+                <label for="messTS">Any Message</label>
+                <input type="textarea" name="messTS" id="messTS"  >
+            </div>
+            <div class="form-control">
+                <h1 class="header1">Chemi-E-Car Head</h1>
+                <label for="nameCEC">Chemi-E-Car Head Name</label>
+                <input type="text" name="nameCEC" id="nameCEC" >
+                <label for="imgCEC">Image URL</label>
+                <input type="text" name="imgCEC" id="imgCEC" >
+                <label for="linkCEC">Linkedin Connection</label>
+                <input type="text" name="linkCEC" id="linkCEC" >
+                <label for="instaCEC">Instragram Connection</label>
+                <input type="text" name="instaCEC" id="instaCEC" >
+                <label for="messCEC">Any Message</label>
+                <input type="textarea" name="messCEC" id="messCEC"  >
+            </div>
+            <div class="form-control">
+                <h1 class="header1">Design Head</h1>
+                <label for="nameDH">Design Head Name</label>
+                <input type="text" name="nameDH" id="nameDH" >
+                <label for="imgDH">Image URL</label>
+                <input type="text" name="imgDH" id="imgDH" >
+                <label for="linkDH">Linkedin Connection</label>
+                <input type="text" name="linkDH" id="linkDH" >
+                <label for="instaDH">Instragram Connection</label>
+                <input type="text" name="instaDH" id="instaDH" >
+                <label for="messDH">Any Message</label>
+                <input type="textarea" name="messDH" id="messDH"  >
+            </div>
+            <div class="form-control">
+                <h1 class="header1">Content Head</h1>
+                <label for="nameCH">Content Head Name</label>
+                <input type="text" name="nameCH" id="nameCH" >
+                <label for="imgCH">Image URL</label>
+                <input type="text" name="imgCH" id="imgCH" >
+                <label for="linkCH">Linkedin Connection</label>
+                <input type="text" name="linkCH" id="linkCH" >
+                <label for="instaCH">Instragram Connection</label>
+                <input type="text" name="instaCH" id="instaCH" >
+                <label for="messCH">Any Message</label>
+                <input type="textarea" name="messCH" id="messCH"  >
+            </div>
+            <div class="form-control">
+                <h1 class="header1">Web Head</h1>
+                <label for="nameWH">Web Head Name</label>
+                <input type="text" name="nameWH" id="nameWH" >
+                <label for="imgWH">Image URL</label>
+                <input type="text" name="imgWH" id="imgWH" >
+                <label for="linkWH">Linkedin Connection</label>
+                <input type="text" name="linkWH" id="linkWH" >
+                <label for="instaWH">Instragram Connection</label>
+                <input type="text" name="instaWH" id="instaWH" >
+                <label for="messWH">Any Message</label>
+                <input type="textarea" name="messWH" id="messWH"  >
+            </div>
+            <div class="form-control">
+                <h1 class="header1">K-12 Coordinator</h1>
+                <label for="nameKC">K-12 Coordinator Name</label>
+                <input type="text" name="nameKC" id="nameKC" >
+                <label for="imgKC">Image URL</label>
+                <input type="text" name="imgKC" id="imgKC" >
+                <label for="linkKC">Linkedin Connection</label>
+                <input type="text" name="linkKC" id="linkKC" >
+                <label for="instaKC">Instragram Connection</label>
+                <input type="text" name="instaKC" id="instaKC" >
+                <label for="messKC">Any Message</label>
+                <input type="textarea" name="messKC" id="messKC"  >
+            </div>
+            <div class="form-control">
+                <h1 class="header1">Social Media Coordinator</h1>
+                <label for="nameSMC">Social Media Coordinator Name</label>
+                <input type="text" name="nameSMC" id="nameSMC" >
+                <label for="imgSMC">Image URL</label>
+                <input type="text" name="imgSMC" id="imgSMC" >
+                <label for="linkSMC">Linkedin Connection</label>
+                <input type="text" name="linkSMC" id="linkSMC" >
+                <label for="instaSMC">Instragram Connection</label>
+                <input type="text" name="instaSMC" id="instaSMC" >
+                <label for="messSMC">Any Message</label>
+                <input type="textarea" name="messSMC" id="messSMC"  >
+            </div>
+            <div class="form-control">
+                <h1 class="header1">Documentation Coordinator</h1>
+                <label for="nameDC">Documentation Coordinator Name</label>
+                <input type="text" name="nameDC" id="nameDC" >
+                <label for="imgDC">Image URL</label>
+                <input type="text" name="imgDC" id="imgDC" >
+                <label for="linkDC">Linkedin Connection</label>
+                <input type="text" name="linkDC" id="linkDC" >
+                <label for="instaDC">Instragram Connection</label>
+                <input type="text" name="instaDC" id="instaDC" >
+                <label for="messDC">Any Message</label>
+                <input type="textarea" name="messDC" id="messDC"  >
+            </div>
+            <div class="form-control">
+                <h1 class="header1">Sophomore Coordinator</h1>
+                <label for="nameSC">Sophomore Coordinator Name</label>
+                <input type="text" name="nameSPC" id="nameSPC" >
+                <label for="imgSPC">Image URL</label>
+                <input type="text" name="imgSPC" id="imgSPC" >
+                <label for="linkSPC">Linkedin Connection</label>
+                <input type="text" name="linkSPC" id="linkSPC" >
+                <label for="instaSPC">Instragram Connection</label>
+                <input type="text" name="instaSPC" id="instaSPC" >
+                <label for="messSPC">Any Message</label>
+                <input type="textarea" name="messSPC" id="messSPC"  >
+            </div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" minlength="8">
+            <button class="btn" type="submit">Add Info</button>
+        </form>
+    </main>
+
+    <%- include('../includes/nwHead.ejs') %>

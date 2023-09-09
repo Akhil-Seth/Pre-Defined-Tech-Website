@@ -1,0 +1,42 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/form.css">
+<link rel="stylesheet" href="/css/Ach.css">
+
+<body>
+    <%- include('../includes/navigation-bar.ejs') %>
+    <main>
+      <br>
+        <div class='quote'>
+            <br>
+        </div>
+        <br>
+        <div class='quote'>
+            <br>
+        </div>
+        <% if (achs.length > 0) { %>
+            <div class="container">
+            <% for (let ach of achs) { %>
+        <div id="cont">
+   
+            <img src="<%= ach.imgUrl %>" alt="" height="300px"> 
+             <div class="box-text">
+             <h1 ><%= ach.name %></h1>
+             </div>
+             <div class="card__actions">
+                <form action="/admin/deleteAch" method="POST">
+                    <input type="hidden" value="<%= ach.id %>" name="AchId">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" minlength="8">
+                    <button class="btn" type="submit">Delete</button>
+                </form>
+
+            </div>
+         </div>
+         <% } %>
+        </div>
+        <% } else { %>
+            <h1>No Achievements Found!</h1>
+            <% } %>
+          </div>
+    </main>
+    <%- include('../includes/nwHead.ejs') %>

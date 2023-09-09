@@ -1,0 +1,39 @@
+<footer class="footer">
+    <div class="layer">
+        <h3>Contact Us</h3>
+        <pre>Address: Our Address
+Jindal colony,Bisra Road
+National Institute Of Technology,Rourkela
+Odisha 769008
+            </pre>
+            <p>Phone No.: +91 97770 40640</p>
+            <p>Alt Phone No.: +91 77354 35092</p>
+            <p>Email: <a href="aiche.nitrkl@gmail.com">aiche.nitrkl@gmail.com</a>
+            </p>
+    </div>
+    <div class="layer">
+        <h3>Upcomings Events</h3>
+        <% if (events.length > 0) { %>
+            <div class="container">
+            <% for (let event of events) { %>
+                <p><%= event.name%></p>
+                <% } %>
+                </div>
+                <% } else { %>
+                    <h1>No UpComing Events Found!</h1>
+                    <% } %>
+        <!-- <p>Event No 1</p>
+        <p>Event No 2</p>
+        <p>Event No 3</p> -->
+    </div>
+    <div class="layer">
+        <h3>Follow Us On</h3>
+        <a href="https://www.facebook.com/AIChENITR" class="fa fa-facebook"></a>
+        <a href="https://www.linkedin.com/company/aiche-nitr/" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com/aiche.nitrkl/?igshid=l5z85gplv99q" class="fa fa-instagram"></a>
+    </div>
+</footer>
+<script src="/js/preload.js"></script>
+<script src="/js/passwordBox.js"></script>
+</body>
+</html>

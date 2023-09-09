@@ -1,0 +1,40 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/form.css">
+<body>
+    <%- include('../includes/navigation-bar.ejs') %>
+        <main>
+            <% if (infos.length > 0) { %>
+                <div class="grid">
+                    <% for (let info of infos) { %>
+                        <article class="card_product-item">
+                            <header class="card__header">
+                                <h1 class="product__title">
+                                    <%= info.nameKC %>
+                                </h1>
+                            </header>
+                            <div class="card__image">
+                                <img src="<%= info.imgKC %>" alt="FA">
+                            </div>
+                            <div class="card__content">
+                                <p class="product__description">
+                                    <%= info.messKC %>
+                                </p>
+                            </div>
+                            <div class='social-media'>
+                                For Instagram => 
+                                <a href='<%= info.instaKC %>' target='_blank' class="btn">
+                                    Click Here
+                                </a>
+                            </div>
+                            <br>
+                            <br>
+                        </article>
+                        <br>
+                        <br>
+                        <% } %>
+                </div>
+                <% } else { %>
+                    <h1>No Information Found!</h1>
+                    <% } %>
+        </main>
+    <%- include('../includes/nwHead.ejs') %>

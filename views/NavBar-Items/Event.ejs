@@ -1,0 +1,52 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/Event.css">
+<link rel="stylesheet" href="/css/EventHover.css">
+<link rel="stylesheet" href="/css/EbSearchBar.css">
+<body>
+    <%- include('../includes/navigation-bar.ejs') %>
+    <%- include('../includes/Eb-searchBar.ejs') %>
+    <div class="even">
+        <h1>Upcoming Events</h1>
+        <% if (events.length > 0) { %>
+            <div class="container">
+            <% for (let event of events) { %>
+        <div class="box" >
+            <div class="image">
+                <img src="<%= event.imgUrl%>" alt="">
+            </div>
+            <div class="content" >
+                <h2><%= event.name%></h2>
+                <p><%= event.mess%></p>
+            </div>
+        </div>
+        <% } %>
+                </div>
+                <% } else { %>
+                    <h1>No Up Coming Found!</h1>
+                    <% } %>
+    </div>
+    </div>
+
+    <div class="even">
+        <h1>Past Events</h1>
+        <% if (pastEvents.length > 0) { %>
+            <div class="container">
+            <% for (let pastEvent of pastEvents) { %>
+        <div class="box" >
+            <div class="image">
+                <img src="<%= pastEvent.imgUrl%>" alt="">
+            </div>
+            <div class="content" >
+                <h2><%= pastEvent.name%></h2>
+                <p><%= pastEvent.mess%></p>
+            </div>
+        </div>
+        <% } %>
+                </div>
+                <% } else { %>
+                    <h1>No Up Coming Found!</h1>
+                    <% } %>
+    </div>
+    </div>
+    <script src="/js/event.js"></script>
+    <%- include('../includes/nwHead.ejs') %>

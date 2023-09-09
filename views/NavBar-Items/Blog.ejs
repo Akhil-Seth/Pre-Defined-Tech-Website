@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+	<link rel="icon" type="image/x-icon" href="https://www.linkpicture.com/q/AIChE_logo02.jpg">
+    <link rel="stylesheet" href="/css/Blog.css">
+	<link rel="stylesheet" href="/css/navBar.css">
+	<script async data-id="five-server" data-file="d:\Web Dev\Website try\navigation bar\Index.html" type="application/javascript" src="/fiveserver.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+	
+</head>
+<body>
+	<%- include('../includes/navigation-bar.ejs') %>
+    <div class="container">
+		<header class="main-header clearfix">
+			<!-- <img class="logo" src="https://www.linkpicture.com/q/BLACKANDWHITE.jpg"> -->
+			<h1 class="name">Blogs </h1>
+		</header>
+        <div class="a"></div><div id="circle"></div>
+
+		<div class="content clearfix">
+      
+      <% if (blogs.length > 0) { %>
+        <div class="co">
+        <% for (let blog of blogs) { %>
+			<div class="cube-container">
+				<div class="photo-cube">
+
+					<img class="front"src="<%= blog.imgUrl %>" alt="">
+					<div class="back photo-desc">
+					  <h3><%= blog.title %></h3>
+					  <p><%= blog.desc %></p>
+						<a href="<%= blog.conn %>" class="button">Details</a>
+					</div>
+					<img class="left" src="<%= blog.imgUrl1 %>" alt="">
+					<img class="right" src="<%= blog.imgUrl2 %>" alt="">
+
+				</div>
+			</div>	
+      <% } %>
+        </div>
+        <% } else { %>
+            <h1>No Achievements So Far!</h1>
+            <% } %>
+			<script src="/js/navBar.js"></script>
+</body>
+</html>

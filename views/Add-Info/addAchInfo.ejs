@@ -1,0 +1,34 @@
+
+    <%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/formNew.css">
+<body>
+
+        <body class="page">
+            <main class="main page__main">
+              <form class="login-form main__login-form" action="/admin/addAchInformation" method="POST">
+                <h3 class="login-form__title">Add to Ach</h3>
+
+                <label for="name"> Name</label>
+                <input type="text" name="name" id="name" >
+                <br>
+                <label for="imageUrl">Image URL</label>
+                <input type="text" name="imageUrl" id="imageUrl" >
+                <br>
+                <label for="desc"> Description</label>
+                <input type="text" name="desc" id="desc" >
+                <br>
+                <label for="conn">Connections</label>
+                <input type="text" name="conn" id="conn" >
+                <br>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" minlength="8">
+                    <br>
+                    <br>
+                <button class="primary-btn" type="submit">Add Info to Ach</button>
+
+              </form>
+            </main>
+          </body>
+    </main>
+
+    <%- include('../includes/nwHead.ejs') %>

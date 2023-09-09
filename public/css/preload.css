@@ -1,0 +1,58 @@
+#preload {
+    background: black  url('https://www.linkpicture.com/q/main-portal3.png') no-repeat center center;
+    background-image:  url('https://www.linkpicture.com/q/Screenshot-2023-09-09-021445_1.png') no-repeat center center;;
+    /* background-image: url('https://www.linkpicture.com/q/main-portal3.png') no-repeat center center; */
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+.mainBd{
+     background: ;
+     height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+#imgLoad{
+    height: 500px;
+    margin-top: -2%;
+    margin-left: 32%;
+}
+.cent{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+@keyframes try {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(3);
+        display: none;
+    }
+}
+
+@media (max-width:1000px) {
+    #imgLoad{
+        height: 500px;
+        margin-top: -2%;
+        margin-left: 25%;
+    }
+}
+@media (max-width:800px) {
+    #imgLoad{
+        height: 500px;
+        margin-top: -2%;
+        margin-left: 20%;
+    }
+}
+@media (max-width:700px) {
+    #imgLoad{
+        height: 500px;
+        margin-top: -2%;
+        margin-left: 13%;
+    }
+}

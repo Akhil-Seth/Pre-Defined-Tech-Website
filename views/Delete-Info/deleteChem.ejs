@@ -1,0 +1,30 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/form.css">
+<body>
+    <%- include('../includes/navigation-bar.ejs') %>
+    <main>
+        <% if (photos.length > 0) { %>
+            <div class="grid">
+                <% for (let photo of photos) { %>
+                    <article class="card product-item">
+                        <div class="card__image">
+                            <img src="<%= photo.imgUrl %>" alt="">
+                        </div>
+                        <div class="card__actions">
+                            <form action="/admin/deleteChemPics" method="POST">
+                                <input type="hidden" value="<%= photo.id %>" name="photoId">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" minlength="8">
+                                <button class="btn" type="submit">Delete</button>
+                            </form>
+
+                        </div>
+                    </article>
+                    <% } %>
+            </div>
+            <% } else { %>
+                <h1>No Products Found!</h1>
+                <% } %>
+    </main>
+
+    <%- include('../includes/nwHead.ejs') %>

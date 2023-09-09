@@ -1,0 +1,41 @@
+
+    
+    <%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/formNew.css">
+<body>
+
+        <body class="page">
+            <main class="main page__main">
+              <form class="login-form main__login-form" action="/admin/addBlogInformation" method="POST">
+                <h3 class="login-form__title">Add to Blog</h3>
+
+                <label for="titleBlog"> Blog Title</label>
+                <input type="text" name="titleBlog" id="titleBlog" >
+                <br>
+                <label for="imageUrl">Image URL</label>
+                <input type="text" name="imageUrl" id="imageUrl" >
+                <br>
+                <label for="imageUrl">Image URL 1</label>
+                <input type="text" name="imageUrl1" id="imageUrl1" >
+                <br>
+                <label for="imageUrl">Image URL 2</label>
+                <input type="text" name="imageUrl2" id="imageUrl2" >
+                <br>
+                <label for="descBlog">Blog Description</label>
+                <input type="text" name="descBlog" id="descBlog" >
+                <br>
+                <label for="connBlog">Connect Blog</label>
+                <input type="text" name="connBlog" id="connBlog" >
+                <br>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" minlength="8">
+                    <br>
+                    <br>
+                <button class="primary-btn" type="submit">Add Info to Blog</button>
+
+              </form>
+            </main>
+          </body>
+    </main>
+
+    <%- include('../includes/nwHead.ejs') %>
