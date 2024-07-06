@@ -11,11 +11,7 @@ window.addEventListener('load' , () => {
         const myTimeout = setTimeout(() => {
             preload.style.display = "none";
         }, 1000);
-
-        // preload.style.display = "none";
         console.log(value);
-        // Expected output: "Success!"
       });
-    // preload.style.animation = "try 1s";
-    // preload.style.animation = "try 1s";
+
 });

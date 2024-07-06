@@ -36,10 +36,15 @@ const Web = require('../models/Web');
 
 
 
+
+
+
+
+
 exports.getHomePage = (req, res, next) => {
   UpEvent.fetchAll(events => {
       res.render('NavBar-Items/home', {
-        pageTitle: 'Aiche',
+        pageTitle: 'Akhil',
         path: '/',
         events: events
       });
@@ -106,12 +111,6 @@ exports.getManageAdminPage = (req, res, next) => {
 });
 };
 
-// exports.getWebAdminPage = (req, res, next) => {
-//   res.render('adminPages/Web-admin', {
-//     pageTitle: 'Web-admin',
-//     path: '/'
-//   });
-// };
 
 exports.getAddK12Page = (req, res, next) => {
   UpEvent.fetchAll(events => {
@@ -173,12 +172,6 @@ exports.getAddManagePage = (req, res, next) => {
 });
 };
 
-// exports.getAddWebPage = (req, res, next) => {
-//   res.render('Add-Info/addJPPics', {
-//     pageTitle: 'Add WEB Pics',
-//     path: '/'
-//   });
-// };
 
 exports.getDeleteK12PicPage = (req, res, next) => {
   K12.fetchAll(photos => {
@@ -258,15 +251,6 @@ exports.getDeleteManagePicPage = (req, res, next) => {
   });
 }
 
-// exports.getDeleteWebPicPage = (req, res, next) => {
-//   Web.fetchAll(photos => {
-//     res.render('Delete-Info/deleteWebPics', {
-//       pageTitle: 'Delete Web Pics',
-//       path: '/admin/EBs?search=Web#',
-//       photos: photos.reverse()
-//     });
-//   });
-// }
 
 exports.postDeleleK12Pic = (req , res , next) => {
   const pass = req.body.password;
@@ -322,14 +306,6 @@ exports.postDeleleDesignPic = (req , res , next) => {
   res.redirect('/admin/EBs?search=Design#');
 }
 
-// exports.postDeleleWebPic = (req , res , next) => {
-//   const pass = req.body.password;
-//   const photoId = req.body.photoId;
-//   if(pass === 'WebPhotoDeleteAkhil') {
-//     Web.deleteById(photoId);
-//   }
-//   res.redirect('/admin/EBs?search=Web#');
-// }
 
 exports.getEbsPage = async (req, res, next) => {
   const search = req.query.search;
@@ -487,18 +463,7 @@ exports.getEbsPage = async (req, res, next) => {
       });
       });
     }
-    // else if (search === 'Web') {
-    //   const photos = await new Promise((resolve, reject) => {
-    //     Web.fetchAll(photos => {
-    //       resolve(photos);
-    //       res.render('SercetPages/Web', {
-    //         pageTitle: 'Web',
-    //         path: '/admin/EBs?search=Web#',
-    //         photos: photos.reverse()
-    //       });
-    //     });
-    //   });
-    // }
+
     else {
       EBs.fetchAll(infos => {
         UpEvent.fetchAll(events => {
@@ -620,21 +585,6 @@ exports.postAddManagePics = (req , res , next) => {
   }
 }
 
-// exports.postAddWebPics = (req , res , next) => {
-//   console.log("Akhil");
-//   console.log(req.body);
-//   const imgUrl = req.body.imageUrl;
-//   const pass = req.body.password;
-//   if(pass === 'WebPageAkhil'){
-//     const updatedList = new Web(imgUrl);
-//     updatedList.save();
-//     console.log(updatedList);
-//     res.redirect('/admin/EBs?search=Web#');
-//   }
-//   else {
-//     res.redirect('/admin/EBs?search=Web#');
-//   }
-// }
 
 exports.postEbsUpdate = (req , res , next) => {
   const ebs = new EBs ( req.body.nameFA , req.body.imgFA , req.body.LinkFA , req.body.instaFA , req.body.messFA , req.body.namePre , req.body.imgPre , req.body.LinkPre , req.body.instaPre , req.body.messPre ,req.body.nameVpre , req.body.imgVpre , req.body.LinkVpre , req.body.instaVpre , req.body.messVpre ,req.body.nameGRH , req.body.imgGRH , req.body.LinkGRH , req.body.instaGRH , req.body.messGRH ,req.body.nameSC , req.body.imgSC , req.body.LinkSC , req.body.instaSC , req.body.messSC ,req.body.nameTS , req.body.imgTS , req.body.LinkTS , req.body.instaTS , req.body.messTS ,req.body.nameCEC , req.body.imgCEC , req.body.LinkCEC , req.body.instaCEC , req.body.messCEC , req.body.nameDH , req.body.imgDH , req.body.LinkDH , req.body.instaDH , req.body.messDH , req.body.nameCH , req.body.imgCH , req.body.LinkCH , req.body.instaCH , req.body.messCH ,req.body.nameWH , req.body.imgWH , req.body.LinkWH , req.body.instaWH , req.body.messWH ,req.body.nameKC , req.body.imgKC , req.body.LinkKC , req.body.instaKC , req.body.messKC ,req.body.nameSMC , req.body.imgSMC , req.body.LinkSMC , req.body.instaSMC , req.body.messSMC ,req.body.nameDC , req.body.imgDC , req.body.LinkDC , req.body.instaDC , req.body.messDC ,req.body.nameSPC , req.body.imgSPC , req.body.LinkSPC , req.body.instaSPC , req.body.messSPC   );
@@ -852,20 +802,7 @@ exports.getAchPage = (req , res , next) => {
 });
 }
 
-// exports.postBlogUpdate = (req , res ,next) => {
-//   console.log('Akhil');
-//   res.redirect('/admin/Blog');
-//   // const imgUrl = req.body.imageUrl;
-//   // const title = req.body.titleBlog;
-//   // const desc = req.body.descBlog;
-//   // const conn = req.body.connBlog;
-//   // const pass = req.body.password;
-//   // if(pass === 'AkhilAkhil') {
-//   //   const blog = new Blog(imgUrl , title , desc , conn);
-//   //   blog.save();
-//   // }
-//   // res.redirect('/admin/Blog');
-// }
+
 exports.postAddBlogInfo = (req , res , next) => {
   const imgUrl = req.body.imageUrl;
   const imgUrl1 = req.body.imageUrl1;
@@ -877,10 +814,11 @@ exports.postAddBlogInfo = (req , res , next) => {
   if(pass === 'AkhilAkhil') {
     const blog = new Blog(imgUrl ,imgUrl1, imgUrl2, title , desc , conn);
     blog.save();
+    console.log('saving sone')
   }
   res.redirect('/admin/Blog');
 }
-
+ 
 exports.postAddAchInfo = (req , res , next) => {
   const imgUrl = req.body.imageUrl;
   const name = req.body.name;
@@ -967,21 +905,6 @@ exports.getDeleteAch = (req , res , next) => {
   });
 }
 
-/* exports.getEventPage = ( req , res , next) => {
-  UpEvent.fetchAll(events => {
-    UpEvent.fetchAll(events => {
-    PastEvent.fetchAll(pastEvents => {
-      res.render('NavBar-Items/Event' , {
-        pageTitle: 'Events',
-        events: events.reverse(),
-        pastEvents: pastEvents.reverse(),
-        path: '/',
-        events: events.reverse()
-      });
-    });
-  });
-  });
-} */
 
 exports.getEventPage = async (req, res, next) => {
   const search = req.query.search;
@@ -1283,31 +1206,7 @@ exports.getEventPage = async (req, res, next) => {
         });
       });
     }
-    // else if (search === 'Web') {
-    //   const photos = await new Promise((resolve, reject) => {
-    //     Web.fetchAll(photos => {
-    //       resolve(photos);
-    //       res.render('SercetPages/Web', {
-    //         pageTitle: 'Web',
-    //         path: '/admin/EBs?search=Web#',
-    //         photos: photos.reverse()
-    //       });
-    //     });
-    //   });
-    // }
     else {
-      // EBs.fetchAll(infos => {
-      //   UpEvent.fetchAll(events => {
-      //   const revArr = infos.reverse();
-      //   const currEbs = revArr[0];
-      //   res.render('NavBar-Items/EBs', {
-      //           pageTitle: 'Ebs',
-      //           currEbs: currEbs,
-      //           path: '/',
-      //           events: events.reverse()
-      //     });
-      //   });
-      // });
       UpEvent.fetchAll(events => {
         UpEvent.fetchAll(events => {
         PastEvent.fetchAll(pastEvents => {
